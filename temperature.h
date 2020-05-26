@@ -1,7 +1,7 @@
 #pragma once
 //
 //    FILE: temperature.h
-// VERSION: 0.2.0
+// VERSION: 0.2.1
 // PURPOSE: temperature functions
 //
 // HISTORY:
@@ -10,8 +10,10 @@
 // 0.2.0 - 2020-04-04 #pragma once, removed WProgram.h, readme.md, comments
 //                    replaced obsolete links with new ones,
 //                    tested and removed some code
+// 0.2.1   2020-05-26 added windchill formulas
+//
 
-#define TEMPERATURE_VERSION "0.2.0"
+#define TEMPERATURE_VERSION "0.2.1"
 
 inline float Fahrenheit(float celsius)
 {
@@ -36,7 +38,7 @@ inline float Kelvin(float celsius)
 // calculation of the saturation vapor pressure part is based upon NOAA ESGG(temp)
 float dewPoint(float celsius, float humidity)
 {
-    // Calculate saturation vapor pressure 
+    // Calculate saturation vapor pressure
     // ratio 100C and actual temp in Kelvin
     float A0 = 373.15 / (273.15 + celsius);
 	// SVP = Saturation Vapor Pressure - based on ESGG() NOAA
@@ -46,7 +48,7 @@ float dewPoint(float celsius, float humidity)
     SVP +=  8.1328e-3 * (pow(10, (-3.49149 * (A0 - 1.0 ))) - 1.0 ) ;
     SVP += log10(1013.246);
 
-	// calculate actual vapor pressure VP; 
+	// calculate actual vapor pressure VP;
 	// note to convert to KPa the -3 is used
     float VP = pow(10, SVP - 3) * humidity;
     float T = log( VP / 0.61078);   // temp var
@@ -55,7 +57,7 @@ float dewPoint(float celsius, float humidity)
 
 
 // dewPointFast() is > 5x faster than dewPoint() - run dewpoint_test.ino
-// delta mdewPointFastax with dewpoint() - run dewpoint_test.ino ==> ~0.347 
+// delta mdewPointFastax with dewpoint() - run dewpoint_test.ino ==> ~0.347
 // (earlier version mentions ~0.6544 but that testcode is gone :(
 // http://en.wikipedia.org/wiki/Dew_point
 float dewPointFast(float celsius, float humidity)
@@ -122,5 +124,32 @@ float heatIndexC(float celcius, float humidity)
     return A + B + C;
 }
 
+// https://en.wikipedia.org/wiki/Wind_chill
+//    US     = Fahrenheit / miles
+//    METRIC = Celsius / meter/sec
+// windspeed @ 10 meter,
+// if convert is true => windspeed will be converted to 1.5 meter
+// else ==> formula assumes windspeed @ 1.5 meter
+
+// US
+float WindChill_F_mph(const float fahrenheit, const float milesPerHour, const bool convert = true)
+{
+  float windSpeed = milesPerHour;
+  if (convert) windSpeed = pow(milesPerHour, 0.16);
+  return 35.74 + 0.6125 * fahrenheit + (0.4275 * fahrenheit - 35.75) * windSpeed;
+}
+
+// METRIC
+float WindChill_C_mps(const float celcius, const float meterPerSecond, const bool convert = true)
+{
+  return WindChill_C_kmph(celsius, meterPerSecond * 3.6, convert);
+}
+
+float WindChill_C_kmph(const float celcius, const float kilometerPerHour, const bool convert = true)
+{
+  float windSpeed = kilometerPerHour;
+  if (cconvert) windSpeed = pow(kilometerPerHour, 0.16);
+  return 13.12 + 0.6215 * celcius + (0.3965 * celcius - 11.37) * windSpeed;
+}
 
 // -- END OF FILE --
