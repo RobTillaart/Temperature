@@ -1,7 +1,7 @@
 #pragma once
 //
 //    FILE: temperature.h
-// VERSION: 0.2.1
+// VERSION: 0.2.2
 // PURPOSE: temperature functions
 //
 // HISTORY:
@@ -11,9 +11,9 @@
 //                    replaced obsolete links with new ones,
 //                    tested and removed some code
 // 0.2.1   2020-05-26 added windchill formulas
-//
+// 0.2.2   2020-06-19 fix library.json
 
-#define TEMPERATURE_VERSION "0.2.1"
+#define TEMPERATURE_VERSION "0.2.2"
 
 inline float Fahrenheit(float celsius)
 {
