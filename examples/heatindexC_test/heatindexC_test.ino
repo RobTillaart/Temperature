@@ -19,7 +19,6 @@ void setup()
   Serial.println(__FILE__);
 
   Serial.println(heatIndexC(25, 50), 2);
-  Serial.println(heatIndexFastC(25, 50), 2);
 
   start = millis();
   for (int cel = 10; cel < 80; cel++)
