@@ -1,6 +1,6 @@
 # Temperature
 
-Arduino library with dewPoint humidex and heatIndex functions.
+Arduino library with dewPoint, humidex, heatIndex and windchill functions.
 
 ## Description
 
@@ -8,7 +8,7 @@ This library contains some weather related functions. These functions
 are approximations based on work of NOAA a.o.
 
 These functions can be used with temperature and humidity sensors e.g.
-DHT22 or sensirion ones to make a weather station application.
+DHT22 or Sensirion ones to make a weather station application.
 
 
 ## Operations
