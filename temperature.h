@@ -41,10 +41,10 @@ inline float Kelvin(float celsius)
 // [1] https://wahiduddin.net/calc/density_algorithms.htm
 // [2] https://web.archive.org/web/20100528030817/https://www.colorado.edu/geography/weather_station/Geog_site/about.htm
 // dewPoint function based on code of [2]
-// calculation of the saturation vapor pressure part is based upon NOAA ESGG(temp)
+// calculation of the saturation vapour pressure part is based upon NOAA ESGG(temp)
 float dewPoint(float celsius, float humidity)
 {
-  // Calculate saturation vapor pressure
+  // Calculate saturation vapour pressure
   // ratio 100C and actual temp in Kelvin
   float A0 = 373.15 / (273.15 + celsius);
   // SVP = Saturation Vapor Pressure - based on ESGG() NOAA
@@ -54,7 +54,7 @@ float dewPoint(float celsius, float humidity)
   SVP +=  8.1328e-3 * (pow(10, (-3.49149 * (A0 - 1.0 ))) - 1.0 ) ;
   SVP += log10(1013.246);
 
-  // calculate actual vapor pressure VP;
+  // calculate actual vapour pressure VP;
   // note to convert to KPa the -3 is used
   float VP = pow(10, SVP - 3) * humidity;
   float T = log( VP / 0.61078);   // temp var
@@ -63,8 +63,8 @@ float dewPoint(float celsius, float humidity)
 
 
 // dewPointFast() is > 5x faster than dewPoint() - run dewpoint_test.ino
-// delta mdewPointFastax with dewpoint() - run dewpoint_test.ino ==> ~0.347
-// (earlier version mentions ~0.6544 but that testcode is gone :(
+// delta mdewPointFastax with dewPoint() - run dewpoint_test.ino ==> ~0.347
+// (earlier version mentions ~0.6544 but that test code is gone :(
 // http://en.wikipedia.org/wiki/Dew_point
 float dewPointFast(float celsius, float humidity)
 {
@@ -77,9 +77,9 @@ float dewPointFast(float celsius, float humidity)
 
 
 // https://en.wikipedia.org/wiki/Humidex
-float humidex(float celsius, float DewPoint)
+float humidex(float celsius, float dewPoint)
 {
-  float e = 19.833625 - 5417.753 /(273.16 + DewPoint);
+  float e = 19.833625 - 5417.753 /(273.16 + dewPoint);
   float h = celsius + 3.3941 * exp(e) - 5.555;
   return h;
 }
@@ -134,9 +134,9 @@ float heatIndexC(float celcius, float humidity)
 // https://en.wikipedia.org/wiki/Wind_chill
 //    US     = Fahrenheit / miles
 //    METRIC = Celsius / meter/sec
-// windspeed @ 10 meter,
-// if convert is true => windspeed will be converted to 1.5 meter
-// else ==> formula assumes windspeed @ 1.5 meter
+// wind speed @ 10 meter,
+// if convert is true => wind speed will be converted to 1.5 meter
+// else ==> formula assumes wind speed @ 1.5 meter
 
 
 // US
@@ -164,3 +164,4 @@ float WindChill_C_mps(const float celcius, const float meterPerSecond, const boo
 
 
 // -- END OF FILE --
+
