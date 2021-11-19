@@ -32,13 +32,14 @@ void setup()
   duration1 = millis() - start;
   Serial.println(duration1);
 
-
   Serial.print("Done...");
 }
 
+
 void loop()
 {
-
 }
 
+
 // -- END OF FILE --
+
