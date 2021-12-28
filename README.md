@@ -8,7 +8,7 @@
 
 # Temperature
 
-Arduino library with dewPoint, humidex, heatIndex and windchill functions.
+Arduino library with dewPoint, humidex, heatIndex and wind-chill functions.
 
 
 ## Description
@@ -25,22 +25,22 @@ DHT22 or Sensirion, to make a weather station application.
 
 ### Conversion
 
-- **float Fahrenheit(float celsius)** idem.
-- **float Celsius(float fahrenheit)** idem.
-- **float Kelvin(float celsius)** idem.
+- **float Fahrenheit(float Celsius)** idem.
+- **float Celsius(float Fahrenheit)** idem.
+- **float Kelvin(float Celsius)** idem.
 
 
 ### DewPoint, humidex
 
-- **float dewPoint(float celsius, float humidity)** idem.
-- **float dewPointFast(float celsius, float humidity)** idem.
-- **float humidex(float celsius, float dewPoint)** idem.
+- **float dewPoint(float Celsius, float humidity)** idem.
+- **float dewPointFast(float Celsius, float humidity)** idem.
+- **float humidex(float Celsius, float dewPoint)** idem.
 
 
 ### heatIndex
 
-- **float heatIndex(float fahrenheit, float humidity)** idem.
-- **float heatIndexC(float celsius, float humidity)** idem.
+- **float heatIndex(float Fahrenheit, float humidity)** idem.
+- **float heatIndexC(float Celsius, float humidity)** idem.
 
 
 ### WindChill
@@ -48,9 +48,9 @@ DHT22 or Sensirion, to make a weather station application.
 Wind speed @ 10 meter, if **convert** is true => wind speed will be converted to 1.5 meter
 else ==> formula assumes wind speed @ 1.5 meter
 
-- **float WindChill_F_mph(float fahrenheit, float milesPerHour, bool convert = true)**
-- **float WindChill_C_kmph(float celcius, float kilometerPerHour, bool convert = true)**
-- **float WindChill_C_mps(float celsius, float meterPerSecond, bool convert = true)**
+- **float WindChill_F_mph(float Fahrenheit, float milesPerHour, bool convert = true)**
+- **float WindChill_C_kmph(float Celsius, float kilometerPerHour, bool convert = true)**
+- **float WindChill_C_mps(float Celsius, float meterPerSecond, bool convert = true)**
 
 
 ## Operations
@@ -65,6 +65,7 @@ See examples for typical usage.
 
 # Future
 
+- improve documentation
 - expand number of formulas
 - 
 
