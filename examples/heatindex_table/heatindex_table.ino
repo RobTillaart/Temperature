@@ -18,7 +18,7 @@ void setup()
 
   Serial.println();
   
-  for (int t = 80; t <= 110; t += 2)
+  for (int t = 00; t <= 110; t += 5)
   {
     Serial.print("\t");
     Serial.print(t);
@@ -26,10 +26,10 @@ void setup()
   Serial.println();
   Serial.println();
 
-  for (int hum = 40; hum <= 100; hum += 5)
+  for (int hum = 10; hum <= 100; hum += 5)
   {
     Serial.print(hum);
-    for (int t = 80; t <= 110; t += 2)
+    for (int t = 00; t <= 110; t += 5)
     {
       float hi = heatIndex(t, hum);
       Serial.print("\t");
