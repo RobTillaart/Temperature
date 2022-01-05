@@ -42,6 +42,11 @@ DHT22 or Sensirion, to make a weather station application.
 - **float heatIndex(float Fahrenheit, float humidity)** idem.
 - **float heatIndexC(float Celsius, float humidity)** idem.
 
+**0.3.0**
+The formula for the **heatIndex()** was taken from https://en.wikipedia.org/wiki/Heat_index.
+Since version 0.3.0 the more elaborated version of https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml 
+will be used. Note: there will be performance differences.
+
 
 ### WindChill
 
