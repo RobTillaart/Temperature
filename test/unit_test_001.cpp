@@ -67,12 +67,11 @@ unittest(test_dewpoint)
 
 unittest(test_heatIndex)
 {
-  fprintf(stderr, "%f\n", heatIndex(20, 50));
-  fprintf(stderr, "%f\n", heatIndex(68, 50));
-  fprintf(stderr, "%f\n", heatIndexC(20, 50));
-  assertEqualFloat(206.46,  heatIndex(20, 50), 0.001);
-  assertEqualFloat(77.3509, heatIndex(68, 50), 0.001);
-  assertEqualFloat(25.1949, heatIndexC(20, 50), 0.001);
+  //  Fahrenheit
+  assertEqualFloat(14.050, heatIndex(20, 50), 0.001);
+  assertEqualFloat(66.850, heatIndex(68, 50), 0.001);
+  //  Celsius
+  assertEqualFloat(19.361, heatIndexC(20, 50), 0.001);
 }
 
 
