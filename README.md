@@ -47,6 +47,16 @@ The formula for the **heatIndex()** was taken from https://en.wikipedia.org/wiki
 Since version 0.3.0 the more elaborated version of https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml 
 will be used. Note: there will be performance differences.
 
+Indicative table
+
+| Fahrenheit | Celsius | description | colour code |
+|:----------:|:-------:|:------------|------------:|
+|   70-79    |  21-26  | warm        |    green    |
+|   80-89    |  26-32  | very warm   |    yellow   |
+|   90-104   |  32-40  | hot         |    orange   |
+|  105-129   |  40-54  | very hot    |       red   |
+|  > 130     |  > 54   | extreme hot |    purple   |
+
 
 ### WindChill
 
