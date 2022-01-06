@@ -17,7 +17,7 @@
 //  0.2.4   2021-01-08  Arduino-CI + unit tests
 //  0.2.5   2021-12-28  Arduino-CI, library.json, readme.md, license, minor edits
 //  0.3.0   2022-01-05  fix #10 update HeatIndex function
-
+//                      compared with https://www.calculator.net/heat-index-calculator.html
 
 
 #define TEMPERATURE_VERSION         (F("0.3.0"))
@@ -98,7 +98,7 @@ float heatIndex(float TF, float RH)
 {
   float HI = 0;
 
-  if (TF > 80)
+  if (TF >= 80)
   {
     const float c1 = -42.379;
     const float c2 =  2.04901523;
