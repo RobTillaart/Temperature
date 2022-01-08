@@ -147,6 +147,31 @@ unittest(test_converter)
 }
 
 
+unittest(test_set_get)
+{
+  temperatureConverter TC;
+
+  fprintf(stderr, "\n 42°C\n");
+  TC.setKelvin(42)
+  assertEqualFloat( 42.00, TC.getKelvin(),     0.01);
+  TC.setCelsius(42);
+  assertEqualFloat( 42.00, TC.getCelsius(),    0.01);
+  TC.setFahrenheit(42);
+  assertEqualFloat( 42.00, TC.getFahrenheit(), 0.01);
+  TC.setReamur(42);
+  assertEqualFloat( 42.00, TC.getReamur(),     0.01);
+  TC.setRankine(42);
+  assertEqualFloat( 42.00, TC.getRankine(),    0.01);
+  TC.setDelisle(42);
+  assertEqualFloat( 42.00, TC.getDelisle(),    0.01);
+  TC.setNewton(42);
+  assertEqualFloat( 42.00, TC.getNewton(),     0.01);
+  TC.setRomer(42);
+  assertEqualFloat( 42.00, TC.getRomer(),      0.01);
+
+}
+
+
 unittest_main()
 
 // --------
