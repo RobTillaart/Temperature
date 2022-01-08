@@ -31,7 +31,7 @@ Note: pre-0.3.1 versions have incorrect heat-index.
 - **float Celsius(float Fahrenheit)** idem.
 - **float Kelvin(float Celsius)** idem.
 
-More exotic classes see - temperatureConverter below.
+More converters are implemented in tne **temperatureConverter()** below.
 
 
 ### DewPoint, humidex
@@ -101,7 +101,10 @@ Check Wikipedia for details about the scales.
 | Reamur      |  °Re  | 1.250000 |    0.00 |   80.00 |
 | Romer       |  °Ro  | 1.904762 |    7.50 |   60.00 |
 
-Note: units to be verified
+Note: units to be verified.
+
+Note: this class is slightly slower than direct conversion, but it 
+prevents to have 8 x 7 optimized functions.
 
 
 #### Constructor
