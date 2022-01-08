@@ -200,13 +200,13 @@ float WindChill_C_mps(const float Celsius, const float meterPerSecond, const boo
 
 /////////////////////////////////////////////////////////////
 //
-//
+//  TEMPERATURE CONVERTER CLASS
 //
 class temperatureConverter
 {
   //  used Celsius as internal unit, to minimize math
   public:
-    temperatureConverter(float celsius = 0) { _temp = celsius; };
+    temperatureConverter()              { _temp = 0; };
 
     void setKelvin(float value = 0)     { _temp = value - 273.15; };
     void setCelsius(float value = 0)    { _temp = value; };

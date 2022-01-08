@@ -81,32 +81,32 @@ else ==> formula assumes wind speed @ 1.5 meter
 
 ## temperatureConverter
 
-since version 0.3.2 a temperature convertor class is added to convert to and from more 
-exotic temperature scales. The idea is to set one scale and get the other, and the converter
-holds the last value set. See also examples.
+Since version 0.3.2 a temperature convertor class is added to convert to and from 
+other (less known) temperature scales. 
+The idea is to set a value in one scale and retrieve it in the other.
+As the converter holds the last value set, multiple conversions are easy.
+See example.
 
 The scales are typically named after their inventor. 
-
 Check Wikipedia for details about the scales.
 
-Table: unit names (to be verified)
+| Name        | units | 1° in °K |    0°C  |   100°C | notes |
+|:------------|:-----:|:--------:|--------:|--------:|:------|
+| Celsius     |  °C   | 1.000000 |    0.00 |  100.00 |
+} Delisle     |  °De  | 0.666666 | -100.00 |   50.00 |
+| Fahrenheit  |  °F   | 0.555556 |   32.00 |  212.00 |
+| Kelvin      |  °K   | 1.000000 |  273.15 |  373.15 |
+| Newton      |  --   | 3.030303 |    0.00 |   33.00 | not the force.
+| Rankine     |  °Ra  | 0.555556 |  491.76 |  671.67 | 0°Ra == 0°K, steps == Fahrenheit.
+| Reamur      |  °Re  | 1.250000 |    0.00 |   80.00 |
+| Romer       |  °Ro  | 1.904762 |    7.50 |   60.00 |
 
-| Name        | units | 1° in °K |    0°C  |   100°C | notes
-|:------------|:-----:|:--------:|--------:|--------:|:-------|
-| Celsius     |  C    | 1.000000 |    0.00 |  100.00 |
-} Delisle     |  De   | 1.500000 | -100.00 |   50.00 |
-| Fahrenheit  |  F    | 0.555556 |   32.00 |  212.00 |
-| Kelvin      |  K    | 1.000000 |  273.15 |  373.15 |
-| Newton      |  ?    | 3.030303 |    0.00 |   33.00 | not the force.
-| Rankine     |  Ra   | 0.555556 |  491.76 |  671.67 | 0°Ra == 0°K, steps == Fahrenheit.
-| Reamur      |  Re   | 1.250000 |    0.00 |   80.00 |
-| Romer       |  Ro   | 1.904762 |    7.50 |   60.00 |
+Note: units to be verified
 
 
 #### Constructor
 
-- **temperatureConverter(float celsius = 0)** Constructor sets the default to zero degrees C.
-This can be overruled if needed.
+- **temperatureConverter()** Constructor sets the default to zero degrees C.
 
 
 #### setters
@@ -132,7 +132,6 @@ This can be overruled if needed.
 - **void getRomer()**
 
 
-
 ## Operations
 
 The functions have a limited scope so one cannot use it for all input values possible.
@@ -148,5 +147,4 @@ See examples for typical usage.
 - improve documentation
   - add short explanation?
 - add more scales to temperatureConverter if exist
-- complete the scale table with other info?
-
+- 

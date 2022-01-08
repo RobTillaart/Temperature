@@ -119,6 +119,32 @@ unittest(test_windChill)
 }
 
 
+unittest(test_converter)
+{
+  temperatureConverter TC;
+
+  TC.setCelsius(0);
+  assertEqualFloat( 273.15, getKelvin(),     0.01);
+  assertEqualFloat(   0.00, getCelsius(),    0.01);
+  assertEqualFloat(  32.00, getFahrenheit(), 0.01);
+  assertEqualFloat(   0.00  getReamur(),     0.01);
+  assertEqualFloat( 491.76, getRankine(),    0.01);
+  assertEqualFloat(-100.00, getDelisle(),    0.01);
+  assertEqualFloat(   0.00, getNewton(),     0.01);
+  assertEqualFloat(   7.50, getRomer(),      0.01);
+
+  TC.setCelsius(100);
+  assertEqualFloat( 273.15, getKelvin(),     0.01);
+  assertEqualFloat( 100.00, getCelsius(),    0.01);
+  assertEqualFloat( 212.00, getFahrenheit(), 0.01);
+  assertEqualFloat(  80.00, getReamur(),     0.01);
+  assertEqualFloat( 671.67, getRankine(),    0.01);
+  assertEqualFloat(  50.00, getDelisle(),    0.01);
+  assertEqualFloat(  33.00, getNewton(),     0.01);
+  assertEqualFloat(  60.00, getRomer(),      0.01);
+}
+
+
 unittest_main()
 
 // --------
