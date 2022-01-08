@@ -128,8 +128,8 @@ unittest(test_converter)
   assertEqualFloat( 273.15, TC.getKelvin(),     0.01);
   assertEqualFloat(   0.00, TC.getCelsius(),    0.01);
   assertEqualFloat(  32.00, TC.getFahrenheit(), 0.01);
-  assertEqualFloat(   0.00,  TC.getReamur(),     0.01);
-  assertEqualFloat( 491.76, TC.getRankine(),    0.01);
+  assertEqualFloat(   0.00, TC.getReamur(),     0.01);
+  assertEqualFloat( 491.67, TC.getRankine(),    0.01);
   assertEqualFloat(-100.00, TC.getDelisle(),    0.01);
   assertEqualFloat(   0.00, TC.getNewton(),     0.01);
   assertEqualFloat(   7.50, TC.getRomer(),      0.01);
