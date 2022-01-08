@@ -123,6 +123,7 @@ unittest(test_converter)
 {
   temperatureConverter TC;
 
+  fprintf(stderr, "\n 0°C\n");
   TC.setCelsius(0);
   assertEqualFloat( 273.15, TC.getKelvin(),     0.01);
   assertEqualFloat(   0.00, TC.getCelsius(),    0.01);
@@ -133,8 +134,9 @@ unittest(test_converter)
   assertEqualFloat(   0.00, TC.getNewton(),     0.01);
   assertEqualFloat(   7.50, TC.getRomer(),      0.01);
 
+  fprintf(stderr, "\n 100°C\n");
   TC.setCelsius(100);
-  assertEqualFloat( 273.15, TC.getKelvin(),     0.01);
+  assertEqualFloat( 373.15, TC.getKelvin(),     0.01);
   assertEqualFloat( 100.00, TC.getCelsius(),    0.01);
   assertEqualFloat( 212.00, TC.getFahrenheit(), 0.01);
   assertEqualFloat(  80.00, TC.getReamur(),     0.01);
