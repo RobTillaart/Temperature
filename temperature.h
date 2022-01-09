@@ -186,7 +186,7 @@ float WindChill_F_mph(const float Fahrenheit, const float milesPerHour, const bo
 }
 
 
-// METRIC
+// METRIC - standard wind chill formula for Environment Canada
 float WindChill_C_kmph(const float Celsius, const float kilometerPerHour, const bool convert = true)
 {
   if ((kilometerPerHour < 4.8) || (Celsius > 10)) return Celsius;
