@@ -81,7 +81,6 @@ else ==> formula assumes wind speed @ 1.5 meter
 
 Indicative table (subjective).
 
-
 | wind chill °C | description          |
 |:-------------:|:---------------------|
 |  > -10        |  cold                |

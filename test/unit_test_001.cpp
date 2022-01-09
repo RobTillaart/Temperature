@@ -71,7 +71,7 @@ unittest(test_heatIndex)
   assertEqualFloat(14.050, heatIndex(20, 50), 0.001);
   assertEqualFloat(66.850, heatIndex(68, 50), 0.001);
   //  Celsius
-  assertEqualFloat(19.361, heatIndexC(20, 50), 0.001);
+  assertEqualFloat(20.000, heatIndexC(20, 50), 0.001);
 }
 
 
