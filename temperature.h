@@ -22,7 +22,7 @@
 //  0.3.1   2022-01-07  fix adjustments
 //  0.3.2   2022-01-08  Renamed Celcius to Celsius.
 //                      added a TempConvertor class for more exotic scales.
-//
+//                      added baroToSeaLevel() - kudos to RobertDB59
 
 
 #define TEMPERATURE_VERSION         (F("0.3.2"))
@@ -195,6 +195,20 @@ float WindChill_C_kmph(const float Celsius, const float kilometerPerHour, const 
 float WindChill_C_mps(const float Celsius, const float meterPerSecond, const bool convert = true)
 {
   return WindChill_C_kmph(Celsius, meterPerSecond * 3.6, convert);
+}
+
+
+// https://www.engineeringtoolbox.com/air-altitude-pressure-d_462.html
+//   Does not have the temperature correction ==> it has almost the -5.257 exponent
+// https://www.omnicalculator.com/physics/air-pressure-at-altitude
+//   similar to https://en.wikipedia.org/wiki/Barometric_formula
+//
+// Note: altitude in meters.
+float baroToSeaLevelC( float pressure, float celsius, float altitude)
+{
+  float altitudeFactor = 0.0065 * altitude;
+  float kelvin = celsius + 273.15;
+  return pressure * pow( 1 - (altitudeFactor / (kelvin + altitudeFactor)), -5.257);
 }
 
 
