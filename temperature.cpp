@@ -7,6 +7,9 @@
 // HISTORY: see CHANGELOG.md
 
 
+#include "temperature.h"
+
+
 float Fahrenheit(float celsius)
 {
   return 1.8 * celsius + 32;    // 5.0 / 9.0 = 1.8

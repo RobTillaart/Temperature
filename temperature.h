@@ -6,6 +6,9 @@
 // PURPOSE: collection temperature functions
 
 
+#include "Arduino.h"
+
+
 #define TEMPERATURE_VERSION         (F("0.3.4"))
 
 
