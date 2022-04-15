@@ -160,5 +160,4 @@ See examples for typical usage.
 
 - improve documentation
   - add short explanation?
-- add more scales to temperatureConverter if exist
 - 
