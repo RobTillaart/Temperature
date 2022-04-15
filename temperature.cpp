@@ -217,38 +217,5 @@ float altitudeToSeaLevel( float pressure, float celsius, float altitude)
 }
 
 
-/////////////////////////////////////////////////////////////
-//
-//  TEMPERATURE CONVERTER CLASS
-//
-class temperatureConverter
-{
-  //  used Celsius as internal unit, to minimize math
-  public:
-    temperatureConverter()              { _temp = 0; };
-
-    void setKelvin(float value = 0)     { _temp = value - 273.15; };
-    void setCelsius(float value = 0)    { _temp = value; };
-    void setFahrenheit(float value = 0) { _temp = (value - 32.0) / 1.8; };
-    void setReamur(float value = 0)     { _temp = value * 1.25; };
-    void setRankine(float value = 0)    { _temp = (value - 491.67) / 1.8; };
-    void setDelisle(float value = 0)    { _temp = (value + 100) / 1.5; };
-    void setNewton(float value = 0)     { _temp = value / 0.33; };
-    void setRomer(float value = 0)      { _temp = (value - 7.5) / 0.525; };
-
-    float getKelvin()      { return _temp + 273.15; };
-    float getCelsius()     { return _temp; };
-    float getFahrenheit()  { return _temp * 1.8 + 32; };
-    float getReamur()      { return _temp * 0.8; };
-    float getRankine()     { return _temp * 1.8 + 491.67; };
-    float getDelisle()     { return _temp * 1.5 - 100.0; };
-    float getNewton()      { return _temp * 0.33; };
-    float getRomer()       { return _temp * 0.525 + 7.5; };
-
-  private:
-    float _temp = 0;
-};
-
-
 // -- END OF FILE --
 
