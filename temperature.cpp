@@ -1,7 +1,7 @@
 //
 //    FILE: temperature.cpp
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.3.6
+// VERSION: 0.3.7
 //    DATE: 2015-03-29
 // PURPOSE: collection temperature functions
 //     URL: https://github.com/RobTillaart/Temperature
