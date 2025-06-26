@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [0.4.0] - 2025-06-26
-- add discomfort index
+- add discomfortIndex
 - add example
+- update unit tests
+- update keywords.txt
 - update readme.md
 - minor edits
 
