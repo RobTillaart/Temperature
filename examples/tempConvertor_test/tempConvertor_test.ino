@@ -2,7 +2,7 @@
 //    FILE: temperatureConvertor.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: test
-//     URL: https://github.com/RobTillaart/temperature
+//     URL: https://github.com/RobTillaart/Temperature
 
 
 #include "temperature.h"

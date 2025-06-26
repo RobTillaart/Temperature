@@ -2,7 +2,7 @@
 //    FILE: humidex_table.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo
-//     URL: https://github.com/RobTillaart/temperature
+//     URL: https://github.com/RobTillaart/Temperature
 
 
 #include "temperature.h"

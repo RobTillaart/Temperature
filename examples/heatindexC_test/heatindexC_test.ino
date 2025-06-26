@@ -2,7 +2,7 @@
 //    FILE: heatindexC_test.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo - test average performance per call in micros.
-//     URL: https://github.com/RobTillaart/temperature
+//     URL: https://github.com/RobTillaart/Temperature
 
 
 #include "temperature.h"
