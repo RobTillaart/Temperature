@@ -120,7 +120,7 @@ class temperatureConverter
     void setFahrenheit(float value = 0) { _temp = (value - 32.0f) / 1.8f; };
     void setReamur(float value = 0)     { _temp = value * 1.25f; };
     void setRankine(float value = 0)    { _temp = (value - 491.67f) / 1.8f; };
-    void setDelisle(float value = 0)    { _temp = (value - 150.0f) / 1.5f; };
+    void setDelisle(float value = 0)    { _temp = (value - 150.0f) / -1.5f; };
     void setNewton(float value = 0)     { _temp = value / 0.33f; };
     void setRomer(float value = 0)      { _temp = (value - 7.5f) / 0.525f; };
     void setLeiden(float value = 0)     { _temp = value - 253.15f; };
