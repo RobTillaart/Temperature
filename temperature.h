@@ -124,7 +124,7 @@ class temperatureConverter
     void setNewton(float value = 0)     { _temp = value / 0.33f; };
     void setRomer(float value = 0)      { _temp = (value - 7.5f) / 0.525f; };
     void setLeiden(float value = 0)     { _temp = value - 253.15f; };
-    void setWedgwood(float value = 0)   { _temp = (value / 72.221875f) + 580.8f; };  //  value / 130F + 1077F
+    void setWedgwood(float value = 0)   { _temp = (72.221875f * value) + 580.8f; };
     
     float getKelvin()      { return _temp + 273.15f; };
     float getCelsius()     { return _temp; };
@@ -135,7 +135,7 @@ class temperatureConverter
     float getNewton()      { return _temp * 0.33f; };
     float getRomer()       { return _temp * 0.525f + 7.5f; };
     float getLeiden()      { return _temp + 253.15f; };
-    float getWedgwood( )   { return (_temp - 580.8f) * 72.221875f; };  //  value / 130F + 1077F
+    float getWedgwood( )   { return (_temp - 580.8f) / 72.221875f; };
 
   private:
     float _temp = 0.0f;
