@@ -31,7 +31,7 @@ void setup()
     float Ne = TC.getNewton();
     float Ro = TC.getRomer();
     float Le = TC.getLeiden();
-    float We = TC.getWedgewood();
+    float We = TC.getWedgwood();
 
     if (celsius % 20 == 0)
     {
@@ -76,7 +76,7 @@ void setup()
       float Ne = TC.getNewton();
       float Ro = TC.getRomer();
       float Le = TC.getLeiden();
-      float We = TC.getWedgewood();
+      float We = TC.getWedgwood();
 
       if (Celsius % 20 == 0)
       {
