@@ -119,9 +119,9 @@ class temperatureConverter
     void setCelsius(float value = 0)    { _temp = value; };
     void setFahrenheit(float value = 0) { _temp = (value - 32.0f) / 1.8f; };
     void setReamur(float value = 0)     { _temp = value * 1.25f; };
-    void setRankine(float value = 0)    { _temp = (value - 491.67f) / 1.8f; };
+    void setRankine(float value = 0)    { _temp = (value - 491.67f) / 1.8f; };  //  (value/1.8) - 273.15f; == known nrs?
     void setDelisle(float value = 0)    { _temp = (value - 150.0f) / -1.5f; };
-    void setNewton(float value = 0)     { _temp = value / 0.33f; };
+    void setNewton(float value = 0)     { _temp = value / 0.33f; };             //  value * 3.03030303f  slightly faster?
     void setRomer(float value = 0)      { _temp = (value - 7.5f) / 0.525f; };
     void setLeiden(float value = 0)     { _temp = value - 253.15f; };
     void setWedgwood(float value = 0)   { _temp = (72.221875f * value) + 580.8f; };
@@ -135,7 +135,7 @@ class temperatureConverter
     float getNewton()      { return _temp * 0.33f; };
     float getRomer()       { return _temp * 0.525f + 7.5f; };
     float getLeiden()      { return _temp + 253.15f; };
-    float getWedgwood( )   { return (_temp - 580.8f) / 72.221875f; };
+    float getWedgwood()    { return (_temp - 580.8f) / 72.221875f; };
 
   private:
     float _temp = 0.0f;

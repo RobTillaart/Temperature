@@ -178,8 +178,6 @@ Check Wikipedia for details about the scales.
 |  Leiden       |   °Le   |  1.000000  |   253.00  |   353.00  |  0 Le = boiling point H2
 |  Wedgwood     |   °We   |  0.01384622|   -8.042  |   -6.657  |  (original) For pottery oven 1We = ~580 C 
 
-Note: units to be verified.
-
 Note: this class is slightly slower than direct conversion, but it 
 prevents to have 10 x 9 optimized functions.
 
@@ -207,12 +205,12 @@ Saint-Patrice, Stufe, Sue de Lyon, Sulzer, Thermostat, Wedgwood [Original], and 
 #include "temperature.h"
 ```
 
-#### Constructor
+### Constructor
 
 - **temperatureConverter()** Constructor sets the default to zero degrees C.
 
 
-#### setters
+### setters
 
 - **void setKelvin(float value = 0)**
 - **void setCelsius(float value = 0)**
@@ -222,8 +220,10 @@ Saint-Patrice, Stufe, Sue de Lyon, Sulzer, Thermostat, Wedgwood [Original], and 
 - **void setDelisle(float value = 0)**
 - **void setNewton(float value = 0)**
 - **void setRomer(float value = 0)**
+- **void setLeiden(float value = 0)**
+- **void setWedgwood(float value = 0)**
 
-#### getters
+### getters
 
 - **void getKelvin()**
 - **void getCelsius()**
@@ -233,6 +233,8 @@ Saint-Patrice, Stufe, Sue de Lyon, Sulzer, Thermostat, Wedgwood [Original], and 
 - **void getDelisle()**
 - **void getNewton()**
 - **void getRomer()**
+- **void getLeiden()**
+- **void getWedgwood()**
 
 
 ## Operations
