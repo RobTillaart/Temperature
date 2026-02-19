@@ -32,8 +32,9 @@ Feedback as always is welcome.
 - https://en.wikipedia.org/wiki/Heat_index.
 - https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml
 - https://wahiduddin.net/calc/density_algorithms.htm
-- https://github.com/RobTillaart/pressure
+- https://github.com/RobTillaart/pressure - conversion
 - https://temperatures.com/  just a lot of interesting stuff
+- https://curiousnotions.com/temperature-converter - online converter 
 
 
 ## Interface
